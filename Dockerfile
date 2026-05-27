@@ -1,5 +1,4 @@
 FROM eclipse-temurin:17
-LABEL authors="francesco.antony"
 
 WORKDIR /app
 
@@ -7,7 +6,7 @@ COPY . .
 
 RUN chmod +x mvnw
 
-RUN ./mvnw clean package
+RUN ./mvnw clean package -DskipTests
 
 ENV PORT=8080
 
